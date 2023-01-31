@@ -10,6 +10,12 @@ const Container = styled.div`
   z-index: 999;
 `;
 
+const Hr = styled.hr`
+height: 2px;
+width: 100%;
+background-color: blue;
+`
+
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
@@ -83,6 +89,8 @@ const Navbar = () => {
             <Avatar src="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" />
           </InfoContainer>
         </Wrapper>
+      <Hr/>
+
       </Container>
     </>
   );
