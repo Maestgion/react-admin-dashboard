@@ -19,12 +19,12 @@ import {
 
 const Container = styled.div`
 background-color: black;
-height: calc(100vh - 8vh);
+height: 92vh;
 border-right: 1px solid gray;
 
 `
 const Wrapper = styled.div`
-padding: 4vh 0vh 4vh 3vh;
+padding: 3vh 0vh 3vh 3vh;
 display: flex;
 flex-direction: column;
 gap: 2vh;

@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { NotificationsNone, Language, Settings } from "@mui/icons-material";
 
 const Container = styled.div`
+  /* width: 100vw; */
   height: 8vh;
   background-color: #060606;
-  position: sticky;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   z-index: 999;
 `;
 
