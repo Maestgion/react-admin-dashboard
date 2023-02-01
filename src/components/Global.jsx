@@ -16,7 +16,8 @@ const SideWrapper = styled.div`
 
 const OtherWrapper = styled.div`
   flex: 5;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   margin: 5vh;
   display: flex;
   justify-content: center;

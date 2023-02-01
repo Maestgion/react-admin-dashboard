@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-    width: 20vw;
+    width: 22vw;
     background-color: black;
     color: white;
     border-radius: 1vh;
