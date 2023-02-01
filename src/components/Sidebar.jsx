@@ -19,8 +19,8 @@ import {
 
 const Container = styled.div`
 background-color: black;
-height: 92vh;
-border-right: 1px solid gray;
+height: 91.8vh;
+border-top: 1px solid gray;
 
 `
 const Wrapper = styled.div`

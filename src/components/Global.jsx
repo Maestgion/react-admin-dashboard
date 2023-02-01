@@ -6,24 +6,23 @@ import Navbar from "./Navbar";
 const Container = styled.div`
   display: flex;
   /* border-top: 2px solid gray; */
- 
+ overflow: hidden;
 `;
 const SideWrapper = styled.div`
   flex: 1;
-
-  
   position: sticky;
   top: 8vh;
-  
-
 `;
 
 const OtherWrapper = styled.div`
   flex: 5;
-  /* background-color: black; */
+  overflow: scroll;
+  margin: 5vh;
+  display: flex;
+  justify-content: center;
 `;
 
-const Global = () => {
+const Global = ({children}) => {
   return (
     <>
       <Navbar />
@@ -31,7 +30,9 @@ const Global = () => {
         <SideWrapper>
           <Sidebar />
         </SideWrapper>
-        <OtherWrapper>jkh</OtherWrapper>
+        <OtherWrapper>
+          {children}
+        </OtherWrapper>
       </Container>
     </>
   );
