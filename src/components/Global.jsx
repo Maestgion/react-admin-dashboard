@@ -20,6 +20,9 @@ const OtherWrapper = styled.div`
   margin: 5vh;
   display: flex;
   justify-content: center;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const Global = ({children}) => {

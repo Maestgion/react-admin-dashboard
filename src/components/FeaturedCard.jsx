@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-    width: 33%;
+    width: 20vw;
     background-color: black;
     color: white;
     border-radius: 1vh;
@@ -39,16 +39,22 @@ align-items: center;
 
 const Trend = styled.span`
 font-size: 2.5vh;
+color: ${props=>props.col === "-" ? "red" : "green"}
+
 `
 
 const TrendIcon = styled.span`
-margin-left: 2px`
+margin-left: 3px;
+color: ${props=>props.col === "-" ? "red" : "green"}
+
+`
+
 
 const Desc = styled.p``
 
 
 
-const FeaturedCard = ({title, price, trend, trendIcon, desc}) => {
+const FeaturedCard = ({title, price, trend, trendVal, trendIcon, desc}) => {
   return (
     <>
         <Container>
@@ -60,11 +66,12 @@ const FeaturedCard = ({title, price, trend, trendIcon, desc}) => {
                 <PriceContainer>
                 <Price>{price}</Price>
                     <TrendContainer>
-                    <Trend>
-                    {trend}
+                    <Trend col={trend}>
+                    {trend} {" "}
+                     {trendVal}
                 </Trend>
-                <TrendIcon>
-
+                <TrendIcon col={trend}>
+                    
                     {trendIcon}
                 </TrendIcon>
                     </TrendContainer>
