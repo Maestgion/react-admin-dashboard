@@ -21,7 +21,8 @@ const Container = styled.div`
 background-color: black;
 height: 91.8vh;
 border-top: 1px solid gray;
-
+position: fixed;
+width: 15%;
 `
 const Wrapper = styled.div`
 padding: 3vh 0vh 3vh 3vh;

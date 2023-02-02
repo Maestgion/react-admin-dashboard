@@ -7,11 +7,12 @@ const Container = styled.div`
   display: flex;
   /* border-top: 2px solid gray; */
  overflow: hidden;
+margin-top: 8vh;
+
 `;
 const SideWrapper = styled.div`
   flex: 1;
-  position: sticky;
-  top: 8vh;
+  
 `;
 
 const OtherWrapper = styled.div`
@@ -24,6 +25,7 @@ const OtherWrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+  
 `;
 
 const Global = ({children}) => {
