@@ -32,18 +32,7 @@ const Home = () => {
             <ChartContainer>
             <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
             </ChartContainer>
-            <ChartContainer>
-            <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
-            </ChartContainer>
-            <ChartContainer>
-            <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
-            </ChartContainer>
-            <ChartContainer>
-            <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
-            </ChartContainer>
-            <ChartContainer>
-            <Chart data={userData} title="User Analytics" grid dataKey="Active User"/>
-            </ChartContainer>
+           
         </Container>
     </>
   )
