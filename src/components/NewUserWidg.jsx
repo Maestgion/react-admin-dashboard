@@ -11,6 +11,8 @@ gap: 2vh;
 border-radius: 2vh;
 background-color: black;
 color: white;
+overflow-y: scroll;
+
 `
 const Title = styled.h2``
 
@@ -22,6 +24,9 @@ const NewUserWidg = () => {
         <Container>
             <Title>Newly Joined Members</Title>
             <MemCard imgSrc="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" name={"Hinata Shoyo" } desg={"Devopssdxfgcvhbjnkm"} />
+            <MemCard imgSrc="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" name={"Hinata Shoyo" } desg={"Devops"} />
+            <MemCard imgSrc="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" name={"Hinata Shoyo" } desg={"Devops"} />
+            <MemCard imgSrc="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" name={"Hinata Shoyo" } desg={"Devops"} />
             <MemCard imgSrc="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" name={"Hinata Shoyo" } desg={"Devops"} />
             <MemCard imgSrc="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" name={"Hinata Shoyo" } desg={"Devops"} />
             <MemCard imgSrc="https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg" name={"Hinata Shoyo" } desg={"Devops"} />

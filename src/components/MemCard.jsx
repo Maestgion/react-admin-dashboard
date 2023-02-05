@@ -44,6 +44,9 @@ justify-content: center;
 align-items: center;
 gap: 5px;
 border-radius: 1vh;
+&:hover{
+color: white;
+}
 `
 
 

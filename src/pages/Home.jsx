@@ -24,11 +24,13 @@ const ChartContainer = styled.div``
 
 const WidgetContainer = styled.div`
   display: flex;
-  gap: 2vh;
+  gap: 5vh;
 `
 
 const NewUserWidgContainer = styled.div`
 flex:1;
+height: 60vh;
+
 `
 const TranscWidgContainer = styled.div`
 flex:2;
