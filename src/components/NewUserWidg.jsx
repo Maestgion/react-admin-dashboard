@@ -11,12 +11,12 @@ gap: 2vh;
 border-radius: 2vh;
 background-color: black;
 color: white;
-
+height: 90%;
 `
 const Title = styled.h2``
 
 const UserInfo = styled.div`
-height: 42vh;
+height: 85%;
 display: flex;
 flex-direction: column;
 gap: 2vh;

@@ -25,19 +25,25 @@ const ChartContainer = styled.div``
 const WidgetContainer = styled.div`
   display: flex;
   gap: 5vh;
+  height: 60vh;
+
+
 `
 
 const NewUserWidgContainer = styled.div`
 flex:1;
-height: 60vh;
+
+height: 100%;
+
 
 
 `
 const TranscWidgContainer = styled.div`
 flex:2;
-height: 60vh;
+height: 100%;
 
 `
+
 
 const Home = () => {
   return (

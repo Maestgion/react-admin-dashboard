@@ -1,54 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
+import TableData from './TableData'
 
 const TableContainer = styled.table`
     width: 100%;
-    
+    border-spacing: 20px;
+
+
 `
 
 const Row = styled.tr`
-    text-align: center;
-    
-`
-
-const Heading = styled.th``
-
-const Customer = styled.td`
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 2vh;
+    text-align: left;
 
 `
 
-const ImgContainer = styled.img`
-width: 40px;
-height: 40px;
-border-radius: 50%;
-object-fit: cover;
-
-`
-
-const UserName = styled.span``
-
-const Date = styled.td`
-color: gray;
-`
-
-const Amount = styled.td`
-color: gray;
-`
-
-const Status = styled.td`
-
- background-color: ${props=>props.type==="Approved" ? "green" : props.type=== "Pending" ? "blue"  : "red"};
+const Heading = styled.th`
+font-size: 3vh;
 `
 
 
 
 
 
-const Table = ({imgSrc, username, date, amount, status  }) => {
+
+
+const Table = () => {
   return (
     <>
         <TableContainer>
@@ -59,13 +35,25 @@ const Table = ({imgSrc, username, date, amount, status  }) => {
                 <Heading>Status</Heading>
             </Row>
             <Row>
-                <Customer>
-                    <ImgContainer src={imgSrc} />
-                    <UserName>{username}</UserName>
-                </Customer>
-                <Date>{date}</Date>
-                <Amount>{amount}</Amount>
-                <Status type={status}>{status}</Status>
+               <TableData imgSrc={"https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg"} username={"Shoyo"} date={"06/02/2023"} amount={"Rs. 799"} status={"Approved"}  />
+            </Row>
+            <Row>
+               <TableData imgSrc={"https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg"} username={"Shoyo"} date={"06/02/2023"} amount={"Rs. 799"} status={"Approved"}  />
+            </Row>
+            <Row>
+               <TableData imgSrc={"https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg"} username={"Shoyo"} date={"06/02/2023"} amount={"Rs. 799"} status={"Pending"}  />
+            </Row>
+            <Row>
+               <TableData imgSrc={"https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg"} username={"Shoyo"} date={"06/02/2023"} amount={"Rs. 799"} status={"Approved"}  />
+            </Row>
+            <Row>
+               <TableData imgSrc={"https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg"} username={"Shoyo"} date={"06/02/2023"} amount={"Rs. 799"} status={"Declined"}  />
+            </Row>
+            <Row>
+               <TableData imgSrc={"https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg"} username={"Shoyo"} date={"06/02/2023"} amount={"Rs. 799"} status={"Approved"}  />
+            </Row>
+            <Row>
+               <TableData imgSrc={"https://i.pinimg.com/550x/75/5b/aa/755baa13299fcb81c9b65a3d635daa48.jpg"} username={"Shoyo"} date={"06/02/2023"} amount={"Rs. 799"} status={"Approved"}  />
             </Row>
         </TableContainer>
     </>
