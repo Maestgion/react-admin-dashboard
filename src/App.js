@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import UserList from "./pages/UserList";
 import User from "./pages/User";
+import NewUser from "./pages/NewUser";
 
 const App = () => {
   return (
@@ -32,6 +33,14 @@ const App = () => {
           path="/users/:id"
           element={<Global>
             <User/>
+          </Global>}
+          />
+        </Routes>
+        <Routes>
+          <Route
+          path="/newUser"
+          element={<Global>
+            <NewUser/>
           </Global>}
           />
         </Routes>

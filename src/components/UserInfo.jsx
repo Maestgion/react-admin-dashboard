@@ -8,7 +8,6 @@ import {
   PhoneAndroid,
   Publish,
 } from "@mui/icons-material";
-import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;

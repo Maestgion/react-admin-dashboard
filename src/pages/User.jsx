@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import UserInfo from "../components/UserInfo";
 import FileUploadIcon from '@mui/icons-material/FileUpload';
+import { Link } from "react-router-dom";
+
+
+
+
 const Container = styled.div`
   flex: 1;
   display: flex;
@@ -126,7 +131,10 @@ const User = () => {
       <Container>
         <Header>
           <Title>Edit User</Title>
+          <Link to="/newUser">
           <HeaderButton>Create</HeaderButton>
+
+          </Link>
         </Header>
         <MainWrapper>
           <Child1>
