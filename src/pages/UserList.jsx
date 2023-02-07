@@ -8,7 +8,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
 
 const Container = styled.div`
-    flex: 4;
+    flex: 5;
 
 `;
 
