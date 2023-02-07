@@ -39,6 +39,8 @@ display: inline-block;
 padding: 5px 8px ;
 border-radius: 5vh;
 margin-top: -4vh;`
+
+
 const TableData = ({imgSrc, username, date, amount, status}) => {
   return (
     <>

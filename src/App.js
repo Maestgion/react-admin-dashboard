@@ -1,24 +1,25 @@
-import React from 'react'
-import Global from './components/Global'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
-import Home from './pages/Home'
-import Chart from './components/Chart'
-import {userData} from "./assets/data/dummyData"
-
-
+import React from "react";
+import Global from "./components/Global";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const App = () => {
   return (
     <>
-    <Global>
-      
-      <Home/>
-    </Global>
-
-{/* <Chart data={userData} title="User Analytics" grid dataKey="Active User"/> */}
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Global>
+                <Home />
+              </Global>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
