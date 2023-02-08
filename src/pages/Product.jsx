@@ -88,8 +88,9 @@ const ProductInfoKey = styled.span``
 const ProductBottom = styled.div`
   padding: 20px;
   margin: 20px;
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+ background-color: black;
+ color: white;
+ border-radius: 1vh;
 `
 
 const ProductForm  = styled.form`
@@ -112,6 +113,7 @@ const ProductFormLeft = styled.div`
   border: none;
   padding: 5px;
   border-bottom: 1px solid gray;
+  background-color: transparent;
 `
 
 const ProductFormLeftSelect = styled.select`
@@ -132,7 +134,7 @@ const ProductFormRight=styled.div`
   justify-content: space-around;
 `
 
-const ProductUpload=styled.input`
+const ProductUpload=styled.div`
   display: flex;
   align-items: center;
 `
@@ -147,6 +149,11 @@ const ProductButton = styled.button`
   cursor: pointer;
 `
 
+const ProductLeftOption = styled.option``
+
+const UploadInput = styled.input`
+    display: none;
+`
 
 
 const Product = () => {
@@ -193,6 +200,35 @@ const Product = () => {
           </ProductTopRight>
           
         </ProductTop>
+
+        <ProductBottom >
+          <ProductForm >
+              <ProductFormLeft>
+                  <ProductFormLeftLabel>Product Name</ProductFormLeftLabel>
+                  <ProductFormLeftInput type="text" placeholder="Apple AirPod" />
+                  <ProductFormLeftLabel>In Stock</ProductFormLeftLabel>
+                  <ProductFormLeftSelect name="inStock" id="idStock">
+                      <ProductLeftOption value="yes">Yes</ProductLeftOption>
+                      <ProductLeftOption value="no">No</ProductLeftOption>
+                  </ProductFormLeftSelect>
+                  <ProductFormLeftLabel>Active</ProductFormLeftLabel>
+                  <ProductFormLeftSelect name="active" id="active">
+                      <ProductLeftOption value="yes">Yes</ProductLeftOption>
+                      <ProductLeftOption value="no">No</ProductLeftOption>
+                  </ProductFormLeftSelect>
+              </ProductFormLeft>
+              <ProductFormRight>
+                  <ProductUpload>
+                      <ProductUploadImg src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt=""  />
+                      <ProductFormLeftLabel htmlFor="file">
+                          <FileUploadIcon/>
+                      </ProductFormLeftLabel>
+                      <UploadInput type="file" id="file"  />
+                  </ProductUpload>
+                  <ProductButton >Update</ProductButton>
+              </ProductFormRight>
+          </ProductForm >
+      </ProductBottom>
 
       </Container>
     </>
