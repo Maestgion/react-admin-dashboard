@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import UserList from "./pages/UserList";
 import User from "./pages/User";
 import NewUser from "./pages/NewUser";
+import ProductList from "./pages/ProductList";
+
 
 const App = () => {
   return (
@@ -44,6 +46,29 @@ const App = () => {
           </Global>}
           />
         </Routes>
+        <Routes>
+        <Route
+            path="/users"
+            element={
+              <Global>
+                <UserList/>
+              </Global>
+            }
+          />
+        </Routes>
+
+        <Routes>
+        <Route
+            path="/products"
+            element={
+              <Global>
+                <ProductList/>
+              </Global>
+            }
+          />
+        </Routes>
+       
+          
       </BrowserRouter>
     </>
   );
