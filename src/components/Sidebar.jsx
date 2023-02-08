@@ -40,15 +40,15 @@ const Sidebar = () => {
       <Container>
         
         <Wrapper>
-          <SidebarMenu mainTitle={"Dahboard"} menuTitle1={"Home"}  menuTitle2={"Analytics"} menuTitle3={"Sales"}  menuIcon1={<LineStyle/>} menuIcon2={<Analytics/>} menuIcon3={<TrendingUp/>}    />
+          <SidebarMenu mainTitle={"Dahboard"} menuTitle1={"Home"}  menuTitle2={"Analytics"} menuTitle3={"Sales"}  menuIcon1={<LineStyle/>} menuIcon2={<Analytics/>} menuIcon3={<TrendingUp/>} pageUrl1={"/"} pageUrl2={"/"} pageUrl3={"/"} />
 
           <SidebarMenu mainTitle={"Quick Menu"} menuTitle1={"Users"}  menuTitle2={"Products"} menuTitle3={"Transactions"} 
           menuTitle4={"Report"} 
-          menuIcon1={<PermIdentity/>} menuIcon2={<Storefront/>} menuIcon3={<AttachMoney/>} menuIcon4={<BarChart/>}  />
+          menuIcon1={<PermIdentity/>} menuIcon2={<Storefront/>} menuIcon3={<AttachMoney/>} menuIcon4={<BarChart/>} pageUrl1={"/users"} pageUrl2={"/products"} pageUrl3={"/"} pageUrl4={"/"} />
 
-          <SidebarMenu mainTitle={"Notifications"} menuTitle1={"Mail"}  menuTitle2={"Feedback"} menuTitle3={"Messages"}  menuIcon1={<MailOutline/>} menuIcon2={<DynamicFeed/>} menuIcon3={<ChatBubbleOutline/>}   />
+          <SidebarMenu mainTitle={"Notifications"} menuTitle1={"Mail"}  menuTitle2={"Feedback"} menuTitle3={"Messages"}  menuIcon1={<MailOutline/>} menuIcon2={<DynamicFeed/>} menuIcon3={<ChatBubbleOutline/>} pageUrl1={"/"} pageUrl2={"/"} pageUrl3={"/"}   />
 
-          <SidebarMenu mainTitle={"Staff"} menuTitle1={"Manage"}  menuTitle2={"Analytics"} menuTitle3={"Reports"}  menuIcon1={<WorkOutline/>} menuIcon2={<Timeline/>} menuIcon3={<Report/>}   />
+          <SidebarMenu mainTitle={"Staff"} menuTitle1={"Manage"}  menuTitle2={"Analytics"} menuTitle3={"Reports"}  menuIcon1={<WorkOutline/>} menuIcon2={<Timeline/>} menuIcon3={<Report/>} pageUrl1={"/"} pageUrl2={"/"} pageUrl3={"/"}  />
         </Wrapper>
       </Container>
     </>
