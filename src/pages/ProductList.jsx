@@ -81,7 +81,7 @@ const ProductList = () => {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/product/" + params.row.id}>
+            <Link to={"/products/" + params.row.id}>
               <ProductListEdit >Edit</ProductListEdit>
             </Link>
             <ProductListDelete>

@@ -6,6 +6,10 @@ import UserList from "./pages/UserList";
 import User from "./pages/User";
 import NewUser from "./pages/NewUser";
 import ProductList from "./pages/ProductList";
+import Product from "./pages/Product";
+import NewProduct from "./pages/NewProduct";
+
+
 
 
 const App = () => {
@@ -32,7 +36,7 @@ const App = () => {
         </Routes>
         <Routes>
           <Route
-          path="/users/:id"
+          path="/users/:userId"
           element={<Global>
             <User/>
           </Global>}
@@ -46,16 +50,6 @@ const App = () => {
           </Global>}
           />
         </Routes>
-        <Routes>
-        <Route
-            path="/users"
-            element={
-              <Global>
-                <UserList/>
-              </Global>
-            }
-          />
-        </Routes>
 
         <Routes>
         <Route
@@ -65,6 +59,24 @@ const App = () => {
                 <ProductList/>
               </Global>
             }
+          />
+        </Routes>
+
+        <Routes>
+          <Route
+          path="/products/:productId"
+          element={<Global>
+            <Product/>
+          </Global>}
+          />
+        </Routes>
+
+        <Routes>
+          <Route
+          path="/newProduct"
+          element={<Global>
+            <NewProduct/>
+          </Global>}
           />
         </Routes>
        
