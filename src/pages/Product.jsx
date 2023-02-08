@@ -31,19 +31,24 @@ const HeaderButton = styled.button`
 
 const ProductTop =styled.div`
   display: flex;
+  align-items: center;
 `
 
 const ProductTopLeft= styled.div`
-  flex: 1;
+  /* flex: 1; */
+  width: 53%;
+  /* height: 50vh; */
 `
 
 
 const ProductTopRight = styled.div `
-  flex: 1;
+  width: 50%;
+  height: 25vh;
   padding: 20px;
   margin: 20px;
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  background-color: black;
+  color: white;
+  border-radius: 1vh ;
 `
 
 const ProductInfoImg = styled.img`
@@ -77,6 +82,8 @@ const ProductInfoItem = styled.div`
 const ProductInfoValue = styled.div`
   font-weight: 300;
 `
+
+const ProductInfoKey = styled.span``
 
 const ProductBottom = styled.div`
   padding: 20px;
