@@ -8,6 +8,7 @@ import NewUser from "./pages/NewUser";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import NewProduct from "./pages/NewProduct";
+import Login from "./components/Login";
 
 
 
@@ -16,9 +17,15 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
+      <Routes>
+        <Route
+        path="/admin/login"
+        element={<Login/>}
+        />
+      </Routes>
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={
               <Global>
                 <Home />
