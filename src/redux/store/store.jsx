@@ -1,5 +1,5 @@
 import {configureStore, combineReducers} from "@reduxjs/toolkit"
-import adminReducer from "../slices/adminSlice"
+import userReducer from "../slices/userSlice"
 import productReducer from "../slices/productSlice"
 import {
     persistStore,
@@ -20,7 +20,7 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-    admin: adminReducer,
+    admin: userReducer,
     product: productReducer
 })
 
