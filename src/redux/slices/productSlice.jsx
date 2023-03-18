@@ -1,5 +1,4 @@
 import {createSlice} from "@reduxjs/toolkit"
-import { Action } from "@remix-run/router"
 
 const productSlice = createSlice({
     name: "product",
@@ -18,11 +17,11 @@ const productSlice = createSlice({
             state.error=false
         },
         getAllProductSuccess: (state, action)=>{
-            state.isFetching = false,
+            state.isFetching = false
             state.products = action.payload
         },
         getAllProductFailure: (state)=>{
-            state.isFetching = false,
+            state.isFetching = false
             state.error = true
         },
         // edit product details
@@ -37,7 +36,7 @@ const productSlice = createSlice({
             ]  = action.payload.product
         },
         editProductFailure: (state)=>{
-            state.isFetching = false,
+            state.isFetching = false
             state.error = true
         },
         // add a new Product 
@@ -46,11 +45,11 @@ const productSlice = createSlice({
             state.error = false
         },
         addProductSuccess: (state, action)=>{
-            state.isFetching = false,
+            state.isFetching = false
             state.products.push(action.payload)
         },
         addProductFailure: (state)=>{
-            state.isFetching=false,
+            state.isFetching=false
             state.error = true
         },
         // delete a product
@@ -64,7 +63,7 @@ const productSlice = createSlice({
 
         },
         deleteProductFailre: (state)=>{
-            state.isFetching = false,
+            state.isFetching = false
             state.error = true
         }
     }

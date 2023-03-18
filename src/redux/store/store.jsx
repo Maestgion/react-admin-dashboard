@@ -1,7 +1,41 @@
-import {configureStore} from "@reduxjs/toolkit"
+import {configureStore, combineReducers} from "@reduxjs/toolkit"
 import adminReducer from "../slices/adminSlice"
+import productReducer from "../slices/productSlice"
+import {
+    persistStore,
+    persistReducer,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER,
+  } from "redux-persist";
+  import storage from "redux-persist/lib/storage";
 
-const store = configureStore({adminReducer})
+const persistConfig = {
+    key: "root",
+    version: 1,
+    storage,
+}
+
+const rootReducer = combineReducers({
+    admin: adminReducer,
+    product: productReducer
+})
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 
-export default store
+export const store = configureStore({
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+})
+
+
+export let persistor = persistStore(store)
