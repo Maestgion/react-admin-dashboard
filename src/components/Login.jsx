@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styled from "styled-components";
+import {useDispatch} from "react-redux"
+import {login} from "../redux/api/apiCalls"
 
 const Container = styled.div`
 width: 100vw;
@@ -69,10 +71,14 @@ const Login = () => {
 
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  
+  const dispatch = useDispatch()
 
   const handleSubmit = (e)=>{
     e.preventDefault()
+    login(dispatch,{
+      username,
+      password
+    })
   }
 
   return (

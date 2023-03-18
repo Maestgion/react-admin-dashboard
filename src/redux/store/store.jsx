@@ -20,7 +20,7 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-    admin: userReducer,
+    user: userReducer,
     product: productReducer
 })
 

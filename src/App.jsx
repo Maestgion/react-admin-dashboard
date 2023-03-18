@@ -1,7 +1,7 @@
 import React from "react";
 import Global from "./components/Global";
 import Home from "./pages/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import UserList from "./pages/UserList";
 import User from "./pages/User";
 import NewUser from "./pages/NewUser";
@@ -9,18 +9,20 @@ import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import NewProduct from "./pages/NewProduct";
 import Login from "./components/Login";
+import { useSelector } from "react-redux";
 
 
 
 
 const App = () => {
+  const user = useSelector(state=>state.user.currentUser)
   return (
     <>
       <BrowserRouter>
       <Routes>
         <Route
-        path="/admin/login"
-        element={<Login/>}
+        path="/login"
+        element={user ? (<Navigate replace to="/home"/>) : (<Login/>)}
         />
       </Routes>
         <Routes>
