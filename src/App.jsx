@@ -10,22 +10,27 @@ import Product from "./pages/Product";
 import NewProduct from "./pages/NewProduct";
 import Login from "./components/Login";
 import { useSelector } from "react-redux";
+import Error from "./components/Error";
 
 
 
 
 const App = () => {
-  const user = useSelector(state=>state.user.currentUser)
+  const admin = useSelector(state=>state.user.currentUser.others.isAdmin)
+  console.log(admin)
+ 
   return (
     <>
       <BrowserRouter>
       <Routes>
         <Route
         path="/login"
-        element={user ? (<Navigate replace to="/home"/>) : (<Login/>)}
+        element={admin ? (<Navigate replace to="/home"/>) : (<Login/>)}
         />
       </Routes>
-        <Routes>
+        {admin ? (
+          <>
+            <Routes>
           <Route
             path="/home"
             element={
@@ -89,6 +94,13 @@ const App = () => {
           />
         </Routes>
        
+          </>
+        ) : (     <Routes>
+          <Route
+          path="*"
+         element={<Error/>}
+          />
+        </Routes>)}
           
       </BrowserRouter>
     </>
