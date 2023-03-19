@@ -14,11 +14,10 @@ import Error from "./components/Error";
 
 
 
-
 const App = () => {
-  const admin = useSelector(state=>state.user.currentUser.others.isAdmin)
-  console.log(admin)
- 
+  const currentUser = useSelector(state => state.user.currentUser)
+  const admin = currentUser ? currentUser.others.isAdmin : false
+
   return (
     <>
       <BrowserRouter>
