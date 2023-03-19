@@ -93,8 +93,7 @@ const Login = () => {
           />
         
           <Button onClick={handleSubmit}  >LOGIN</Button>
-          <Link>FORGOT PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+   
          </Form>
 
         </Wrapper>
